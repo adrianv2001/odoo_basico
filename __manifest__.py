@@ -3,14 +3,14 @@
     'name': "odoo_basico",
 
     'summary': """
-        Short (1 phrase/line) summary of the module's purpose, used as
-        subtitle on modules listing or apps.openerp.com""",
+        Módulo 2 de Odoo, Agrupamientos y Filtros""",
 
     'description': """
-        Long description of module's purpose
+        Agrupamientos de informacion para ver los datos en la cista tree colapsados por el valor de un campo
+        Filtros de informacion para filtrar los valores de una tabla depeniendo de las condiciones que definamos
     """,
 
-    'author': "My Company",
+    'author': "Adrian Vidal",
     'website': "http://www.yourcompany.com",
 
     # Categories can be used to filter modules in modules listing
@@ -27,6 +27,8 @@
         # 'security/ir.model.access.csv',
         'views/views.xml',
         'views/templates.xml',
+        'views/informacion.xml',
+
     ],
     # only loaded in demonstration mode
     'demo': [
