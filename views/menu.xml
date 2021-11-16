@@ -1,7 +1,8 @@
 <odoo>
     <data>
-        <menuitem id=""/>
-        <menuitem id=""/>
+        <menuitem id="main_odoo_basico" name="Adrian Vidal. Odoo Basico"/>
+        <menuitem id="menu_informacion" name="Adrian Vidal. Informacion" parent="main_odoo_basico" action="informacion_list_action"/>
+        <menuitem id="menu_suceso" name="Adrian Vidal. Suceso" parent="main_odoo_basico" action="suceso_list_action"/>
     </data>
 
 </odoo>
