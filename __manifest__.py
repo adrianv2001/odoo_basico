@@ -28,9 +28,14 @@
         'views/informacion.xml',
 
         'views/templates.xml',
-
+        'reports/report_informacion.xml',
         'views/menu.xml',
+        'reports/report_header.xml',
+        'views/lineapedido.xml',
+        'views/pedido.xml',
+        'views/persona.xml',
         'security/ir.model.access.csv',
+
 
     ],
     # only loaded in demonstration mode

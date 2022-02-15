@@ -14,6 +14,15 @@
             <field name="model">odoo_basico.informacion</field>
             <field name="arch" type="xml">
                 <form string="Formulario Informacion">
+                    <header>
+                        <button name="ver_contexto" type="object" string="Ver Contexto"/>
+                        <button name="envio_email" type="object" string="Enviar Email"/>
+                        <button name="actualiza_hora_actual_UTC" type="object" string="Actualiza Hora Actual a UTC"/>
+                        <button name="actualiza_hora_timezone_usuario_dende_boton_e_apidepends" type="object"
+                                string="Actualiza Hora a Timezone do Usuario" class="oe_highlight"/>
+
+
+                    </header>
                     <sheet>
                         <group>
                             <field name="name"/>
@@ -27,6 +36,14 @@
                                     <field name="sexo_traducido"/>
                                 </group>
                             </page>
+                            <page string="Data e hora">
+                                <group>
+                                    <field name="data"/>
+                                    <field name="data_hora"/>
+                                    <field name="hora_actual"/>
+                                    <field name="hora_timezone_usuario"/>
+                                </group>
+                            </page>
                             <page string="Datos numericos">
                                 <group>
                                     <field name="alto"/>
@@ -38,6 +55,15 @@
                                     <field name="peso"/>
                                     <field name="volume"/>
                                     <field name="densidad"/>
+                                </group>
+                            </page>
+                            <page string="Datos Binary">
+                                <group>
+                                    <field name="adxunto" filename="adxunto_nome"/>
+                                    <field name="foto" widget="image" class="oe_avatar"/>
+                                    <field name="foto" widget="image"/>
+                                    <field name="adxunto_nome" invisible="1"/>
+
                                 </group>
                             </page>
                         </notebook>
@@ -73,10 +99,29 @@
                     <field name="densidad"/>
                     <field name="autorizado"/>
                     <field name="sexo_traducido"/>
+                    <field name="data"/>
+                    <field name="data_hora"/>
+                    <field name="hora_actual"/>
+                    <field name="hora_utc"/>
+                    <!--<field name="mes_castelan"/>
+                    <field name="mes_galego"/>-->
                 </tree>
 
             </field>
         </record>
+
+        <record model="ir.ui.view" id="informacion_search_view">
+            <field name="name">informacion.search</field>
+            <field name="model">odoo_basico.informacion</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="name"/>
+                    <field name="descripcion"/>
+                    <field name="sexo_traducido"/>
+                </search>
+            </field>
+        </record>
+
         <record model="ir.filters" id="filtro1">
             <field name="name">Filtro informacion 1</field>
             <field name="model_id">odoo_basico.informacion</field>
