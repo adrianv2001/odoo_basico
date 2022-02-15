@@ -35,6 +35,7 @@
         'views/pedido.xml',
         'views/persona.xml',
         'security/ir.model.access.csv',
+        'acciones_planificadas/accion_planificada'
 
 
     ],
