@@ -20,7 +20,7 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base'],
+    'depends': ['base','account'],
 
     # always loaded
     'data': [
@@ -34,8 +34,9 @@
         'views/lineapedido.xml',
         'views/pedido.xml',
         'views/persona.xml',
+        'acciones_planificadas/accion_planificada.xml',
         'security/ir.model.access.csv',
-        'acciones_planificadas/accion_planificada'
+        'security/xestion_usuarios.xml',
 
 
     ],
